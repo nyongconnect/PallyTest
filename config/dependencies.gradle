@@ -5,7 +5,7 @@ ext {
     versionName = "1.0"
 
     //Android Version
-    compileSdk = 32
+    compileSdk = 33
     targetSdk = 32
     minSdk = 26
 
@@ -22,9 +22,9 @@ ext {
     retrofitVersion = '2.9.0'
     loggerVersion = '4.9.0'
     hilt_version = "2.44"
-    hilt_view_model_version = "1.0.0-alpha02"
+    hilt_view_model_version = "1.0.0-alpha03"
 
-    navigation_ui_ktx_version = "2.3.5"
+    navigation_ui_ktx_version = "2.5.3"
 
 
     //testLibraryVersion
@@ -34,6 +34,7 @@ ext {
 
     applicationDependencies = [
             kotlinCore : "androidx.core:core-ktx:${kotlinVersion}",
+            androidCore : "androidx.core:core:${kotlinVersion}",
             kotlin                 : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}",
             kotlinCoroutinesCore   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${kotlinCoroutinesVersion}",
             kotlinCoroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${kotlinCoroutinesVersion}",
