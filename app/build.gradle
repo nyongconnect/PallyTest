@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    namespace 'com.example.pallytest'
+    compileSdk globalConfiguration.compileSdk
+
+    defaultConfig {
+        applicationId globalConfiguration.applicationId
+        minSdk globalConfiguration.minSdk
+        targetSdk globalConfiguration.targetSdk
+        versionCode globalConfiguration.versionCode
+        versionName globalConfiguration.versionName
+
+        resValue('string', 'app_version', versionName)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    viewBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    def applicationDependencies = rootProject.ext.applicationDependencies
+    def testDependencies = rootProject.ext.testDependencies
+
+    implementation applicationDependencies.kotlinCore
+    implementation applicationDependencies.appCompat
+    implementation applicationDependencies.material
+    implementation applicationDependencies.constraintLayout
+    implementation applicationDependencies.kotlinCoroutinesCore
+    implementation applicationDependencies.kotlinCoroutinesAndroid
+    implementation applicationDependencies.legacySupport
+    implementation applicationDependencies.lifecycleExtension
+    implementation applicationDependencies.lifecycleRuntime
+    implementation applicationDependencies.lifecycleViewmodel
+    implementation applicationDependencies.gsonConverter
+    implementation applicationDependencies.httpLogging
+    implementation applicationDependencies.retrofit
+    implementation applicationDependencies.fragmentKtx
+    implementation applicationDependencies.activtyKtx
+    implementation applicationDependencies.navigation
+    implementation applicationDependencies.navigationUi
+    implementation applicationDependencies.hilt
+    implementation applicationDependencies.hiltViewmodel
+
+    testImplementation testDependencies.junit
+    androidTestImplementation testDependencies.junitExt
+    androidTestImplementation testDependencies.espressoCore
+}
