@@ -3,6 +3,7 @@ package com.example.pallytest.presentation.ui.home
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.pallytest.R
 import com.example.pallytest.databinding.FragmentHomeBinding
 import com.example.pallytest.presentation.adapters.EventAdapter
 import com.example.pallytest.presentation.adapters.MilongasAdapter
@@ -46,6 +47,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
             adapter = milongasAdapter
         }
+
+        binding.viewMilongas.txtItemHeader.text = getString(R.string.text_milogan_near_you)
+        binding.viewTeachers.txtItemHeader.text = getString(R.string.text_teachers_near_you)
+        binding.viewEvents.txtItemHeader.text = getString(R.string.text_events)
     }
 
     override fun observeData() {

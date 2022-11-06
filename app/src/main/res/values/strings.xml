@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">PallyTest</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="milongas">Milongas</string>
     <string name="teachers">Teachers</string>
     <string name="schools">Schools</string>
@@ -15,6 +13,11 @@
     <string name="_20_years_of_experience">20 years of experience</string>
     <string name="book_a_lesson">Book a Lesson</string>
     <string name="dummy_date">Fri.Aug 22th at 15:00 - Aug 13</string>
-    <string name="dummy_description">El Cachivache Orkesta -NY Queer Tango...</string>
+    <string name="dummy_description">El Cachivache Orkesta -NY Queer Tango…</string>
     <string name="dummy_location">Hungarian House of New York - New York</string>
+    <string name="text_milogan_near_you">Milongas near you</string>
+    <string name="text_teachers_near_you">Teachers near you</string>
+    <string name="text_events">Events</string>
+    <string name="hi_cassandra">Hi, Cassandra!</string>
+    <string name="what_are_you_looking_for_today">What are you looking for today?</string>
 </resources>
