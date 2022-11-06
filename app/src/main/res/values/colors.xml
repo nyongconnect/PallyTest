@@ -11,4 +11,7 @@
     <color name="blue">#00E4FF</color>
     <color name="background_colour">#1D172B</color>
     <color name="pally_green">#25EDDA</color>
+    <color name="grey">#A2A2A2</color>
+    <color name="darker_grey">#7D7985</color>
+    <color name="dirty_white">#EAEAEA</color>
 </resources>

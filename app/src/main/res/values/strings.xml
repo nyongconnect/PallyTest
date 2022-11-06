@@ -5,4 +5,16 @@
     <string name="milongas">Milongas</string>
     <string name="teachers">Teachers</string>
     <string name="schools">Schools</string>
+    <string name="la_rosa_milonga">La Rosa Milonga</string>
+    <string name="from_15_30_to_18_00">from 15:30 to 18:00</string>
+    <string name="_15_km_away">15 km away</string>
+    <string name="directions">Directions</string>
+    <string name="_5_0">5.0</string>
+    <string name="_100">100</string>
+    <string name="info">+ Info</string>
+    <string name="_20_years_of_experience">20 years of experience</string>
+    <string name="book_a_lesson">Book a Lesson</string>
+    <string name="dummy_date">Fri.Aug 22th at 15:00 - Aug 13</string>
+    <string name="dummy_description">El Cachivache Orkesta -NY Queer Tango...</string>
+    <string name="dummy_location">Hungarian House of New York - New York</string>
 </resources>
