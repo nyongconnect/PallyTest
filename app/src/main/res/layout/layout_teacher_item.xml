@@ -123,7 +123,7 @@
                 android:layout_marginStart="@dimen/dimen_12dp"
                 android:text="@string/book_a_lesson"
                 android:textColor="@color/pally_green"
-                android:fontFamily="@font/inter_semi_bold"
+                android:fontFamily="@font/inter_regular"
                 android:textSize="@dimen/dimen_14sp"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView4"
                 app:layout_constraintEnd_toEndOf="parent"
