@@ -25,6 +25,7 @@ ext {
     hilt_view_model_version = "1.0.0-alpha03"
 
     navigation_ui_ktx_version = "2.5.3"
+    kaptHiltVersion = "1.0.0"
 
 
     //testLibraryVersion
@@ -53,7 +54,10 @@ ext {
             navigation : "androidx.navigation:navigation-fragment-ktx:${navigation_ui_ktx_version}",
             navigationUi : "androidx.navigation:navigation-ui-ktx:${navigation_ui_ktx_version}",
             hilt :"com.google.dagger:hilt-android:${hilt_version}",
-            hiltViewmodel : "androidx.hilt:hilt-lifecycle-viewmodel:${hilt_view_model_version}"
+            hiltViewmodel : "androidx.hilt:hilt-lifecycle-viewmodel:${hilt_view_model_version}",
+            kaptHilt : "androidx.hilt:hilt-compiler:${kaptHiltVersion}",
+            kaptHiltAndroidCompiler : "com.google.dagger:hilt-android-compiler:${hilt_version}",
+            inject : "javax.inject:javax.inject:1"
     ]
 
     testDependencies = [
