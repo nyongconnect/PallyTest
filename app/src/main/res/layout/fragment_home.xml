@@ -19,78 +19,75 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:id="@+id/cardView2"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:elevation="20dp"
-        app:cardCornerRadius="50dp"
-        android:backgroundTint="@color/background_colour"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/circular_shadow"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toStartOf="@+id/cardView"
         app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout2" >
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout2">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_milongas"
-            android:scaleType="center"/>
+            android:scaleType="center"
+            android:src="@drawable/ic_milongas" />
 
-    </androidx.cardview.widget.CardView>
+    </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:id="@+id/cardView"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:cardCornerRadius="50dp"
-        android:elevation="20dp"
-        android:backgroundTint="@color/background_colour"
+        android:background="@drawable/circular_shadow"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toStartOf="@+id/cardView3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cardView2"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.75" >
+        app:layout_constraintVertical_bias="0.75">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_teachers"
-            android:scaleType="center"/>
-    </androidx.cardview.widget.CardView>
+            android:scaleType="center"
+            android:src="@drawable/ic_teachers" />
+    </LinearLayout>
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:id="@+id/cardView3"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:elevation="20dp"
-        app:cardCornerRadius="50dp"
-        android:backgroundTint="@color/background_colour"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/circular_shadow"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintVertical_bias="0.66" >
+        app:layout_constraintVertical_bias="0.66">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ic_school"
-            android:scaleType="center"/>
-    </androidx.cardview.widget.CardView>
+            android:scaleType="center"
+            android:src="@drawable/ic_school" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
-        android:text="@string/milongas"
-        android:gravity="center"
-        android:textSize="16sp"
         android:fontFamily="@font/inter_regular"
+        android:gravity="center"
+        android:text="@string/milongas"
         android:textColor="@color/pally_green"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cardView2"
         app:layout_constraintStart_toStartOf="@+id/cardView2"
         app:layout_constraintTop_toBottomOf="@+id/cardView2" />
@@ -100,9 +97,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
+        android:fontFamily="@font/inter_regular"
         android:gravity="center"
         android:text="@string/teachers"
-        android:fontFamily="@font/inter_regular"
         android:textColor="@color/pally_green"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="@+id/cardView"
@@ -113,11 +110,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center"
         android:text="@string/schools"
         android:textColor="@color/pally_green"
-        android:gravity="center"
         android:textSize="16sp"
-        android:fontFamily="@font/inter_regular"
         app:layout_constraintEnd_toEndOf="@+id/cardView3"
         app:layout_constraintStart_toStartOf="@+id/cardView3"
         app:layout_constraintTop_toBottomOf="@+id/cardView3" />
@@ -127,10 +124,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/inter_bold"
         android:text="@string/hi_cassandra"
         android:textColor="@color/background_colour"
         android:textSize="18sp"
-        android:fontFamily="@font/inter_bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -139,10 +136,10 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_regular"
         android:text="@string/what_are_you_looking_for_today"
         android:textColor="@color/background_colour"
         android:textSize="14sp"
-        android:fontFamily="@font/inter_regular"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -161,6 +158,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:paddingTop="10dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
