@@ -9,6 +9,7 @@ import com.example.pallytest.R
 import com.example.pallytest.databinding.LayoutTeacherItemBinding
 import com.example.pallytest.model.MilongasModel
 import com.example.pallytest.model.TeachersModel
+import com.example.pallytest.presentation.utils.setTextDiff
 
 class TeachersAdapter (private val context: Context, val onClick: (MilongasModel) -> Unit) : RecyclerView.Adapter<TeachersAdapter.TeachersViewHolder>() {
 
@@ -34,7 +35,7 @@ class TeachersAdapter (private val context: Context, val onClick: (MilongasModel
     inner class TeachersViewHolder(val binding: LayoutTeacherItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(element: TeachersModel) {
-           // binding.txtMilongasName.text = element.name
+           binding.txtExperience.setTextDiff("20 years of experience", 9)
             itemView.setOnClickListener {
                 //onClick.invoke(element)
             }
