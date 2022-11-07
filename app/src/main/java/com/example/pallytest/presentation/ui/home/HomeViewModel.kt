@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.pallytest.model.EventModel
 import com.example.pallytest.model.MilongasModel
 import com.example.pallytest.model.TeachersModel
-import com.example.pallytest.presentation.utils.DummyHelper
 import com.example.pallytest.presentation.utils.DummyHelper.dummyEvent
 import com.example.pallytest.presentation.utils.DummyHelper.dummyMilangas
 import com.example.pallytest.presentation.utils.DummyHelper.dummyTeacher

@@ -8,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pallytest.R
 import com.example.pallytest.databinding.LayoutEventItemBinding
 import com.example.pallytest.model.EventModel
-import com.example.pallytest.model.MilongasModel
 
 class EventAdapter (private val context: Context, val onClick: (EventModel) -> Unit) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
