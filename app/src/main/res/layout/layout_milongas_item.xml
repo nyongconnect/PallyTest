@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="300dp"
+    android:layout_width="@dimen/dimen_300dp"
     android:layout_height="wrap_content"
-    android:layout_marginStart="0dp"
-    android:layout_marginEnd="10dp"
+    android:layout_marginStart="@dimen/match_constraint"
+    android:layout_marginEnd="@dimen/dimen_10dp"
     android:backgroundTint="@color/background_colour"
     android:orientation="vertical"
-    app:cardCornerRadius="10dp">
+    app:cardCornerRadius="@dimen/dimen_10dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shadow_view"
-        android:padding="10dp">
+        android:padding="@dimen/dimen_10dp">
 
         <LinearLayout
             android:id="@+id/milongas_image_layout"
@@ -26,8 +26,8 @@
 
             <ImageView
                 android:id="@+id/img_milongas"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
+                android:layout_width="@dimen/dimen_110dp"
+                android:layout_height="@dimen/dimen_110dp"
                 android:src="@drawable/milongas_placeholder" />
 
         </LinearLayout>
@@ -36,11 +36,11 @@
             android:id="@+id/txt_milongas_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
             android:fontFamily="@font/inter_bold"
             android:text="@string/la_rosa_milonga"
             android:textColor="@color/white"
-            android:textSize="14sp"
+            android:textSize="@dimen/dimen_14sp"
             app:layout_constraintStart_toEndOf="@+id/milongas_image_layout"
             app:layout_constraintTop_toTopOf="@+id/milongas_image_layout" />
 
@@ -48,7 +48,7 @@
             android:id="@+id/milongasRateIv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dimen_6dp"
             app:layout_constraintStart_toStartOf="@+id/txt_milongas_name"
             app:layout_constraintTop_toBottomOf="@+id/txt_milongas_name"
             app:srcCompat="@drawable/ic_rate" />
@@ -57,11 +57,11 @@
             android:id="@+id/txt_milongas_rate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="@dimen/dimen_4dp"
             android:fontFamily="@font/inter_semi_bold"
             android:text="@string/_5_0"
             android:textColor="@color/white"
-            android:textSize="13sp"
+            android:textSize="@dimen/dimen_13sp"
             app:layout_constraintBottom_toBottomOf="@+id/milongasRateIv"
             app:layout_constraintStart_toEndOf="@+id/milongasRateIv"
             app:layout_constraintTop_toTopOf="@+id/milongasRateIv" />
@@ -70,11 +70,11 @@
             android:id="@+id/txt_milongas_rate_count"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="@dimen/dimen_4dp"
             android:fontFamily="@font/inter_regular"
             android:text="@string/_100"
             android:textColor="@color/grey"
-            android:textSize="13sp"
+            android:textSize="@dimen/dimen_13sp"
             app:layout_constraintBottom_toBottomOf="@+id/txt_milongas_rate"
             app:layout_constraintStart_toEndOf="@+id/txt_milongas_rate"
             app:layout_constraintTop_toTopOf="@+id/txt_milongas_rate" />
@@ -86,7 +86,7 @@
             android:fontFamily="@font/inter_regular"
             android:text="@string/from_15_30_to_18_00"
             android:textColor="@color/grey"
-            android:textSize="13sp"
+            android:textSize="@dimen/dimen_13sp"
             app:layout_constraintStart_toStartOf="@+id/milongasRateIv"
             app:layout_constraintTop_toBottomOf="@+id/milongasRateIv" />
 
@@ -95,8 +95,8 @@
             android:id="@+id/img_milongas_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
             app:layout_constraintStart_toEndOf="@+id/milongas_image_layout"
             app:layout_constraintTop_toBottomOf="@+id/txt_milongas_time"
             app:srcCompat="@drawable/ic_distance" />
@@ -105,21 +105,21 @@
             android:id="@+id/txt_milongas_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/dimen_8dp"
             android:fontFamily="@font/inter_regular"
             android:text="@string/_15_km_away"
             android:textColor="@color/grey"
-            android:textSize="13sp"
+            android:textSize="@dimen/dimen_13sp"
             app:layout_constraintBottom_toBottomOf="@+id/img_milongas_distance"
             app:layout_constraintStart_toEndOf="@+id/img_milongas_distance"
             app:layout_constraintTop_toTopOf="@+id/img_milongas_distance" />
 
         <View
             android:id="@+id/milongas_view"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="@dimen/dimen_1dp"
+            android:layout_marginTop="@dimen/dimen_4dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
             android:background="@color/light_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -130,7 +130,7 @@
             android:id="@+id/img_milongas_direction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dimen_6dp"
             app:layout_constraintStart_toStartOf="@+id/milongas_view"
             app:layout_constraintTop_toBottomOf="@+id/milongas_view"
             app:srcCompat="@drawable/ic_directions" />
@@ -139,11 +139,11 @@
             android:id="@+id/txt_milongas_direction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="4dp"
+            android:layout_marginStart="@dimen/dimen_4dp"
             android:fontFamily="@font/inter_regular"
             android:text="@string/directions"
             android:textColor="@color/pally_green"
-            android:textSize="14sp"
+            android:textSize="@dimen/dimen_14sp"
             app:layout_constraintBottom_toBottomOf="@+id/img_milongas_direction"
             app:layout_constraintStart_toEndOf="@+id/img_milongas_direction"
             app:layout_constraintTop_toTopOf="@+id/img_milongas_direction" />
@@ -152,11 +152,11 @@
             android:id="@+id/txt_milongas_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="@dimen/dimen_12dp"
             android:fontFamily="@font/inter_regular"
             android:text="@string/info"
             android:textColor="@color/pally_green"
-            android:textSize="14sp"
+            android:textSize="@dimen/dimen_14sp"
             app:layout_constraintBottom_toBottomOf="@+id/txt_milongas_direction"
             app:layout_constraintStart_toEndOf="@+id/txt_milongas_direction"
             app:layout_constraintTop_toTopOf="@+id/txt_milongas_direction" />

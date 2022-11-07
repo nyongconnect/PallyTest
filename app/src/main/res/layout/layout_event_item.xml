@@ -2,23 +2,23 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="278dp"
+    android:layout_width="@dimen/dimen_278dp"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
+    android:layout_marginEnd="@dimen/dimen_8dp"
     android:backgroundTint="@color/background_colour">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shadow_view"
-        android:paddingBottom="12dp">
+        android:paddingBottom="@dimen/dimen_12dp">
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/match_constraint"
             android:layout_height="wrap_content"
-            android:layout_marginStart="2dp"
-            android:layout_marginEnd="2dp"
+            android:layout_marginStart="@dimen/dimen_2dp"
+            android:layout_marginEnd="@dimen/dimen_2dp"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -29,12 +29,12 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
             android:fontFamily="@font/inter_regular"
             android:text="@string/dummy_date"
             android:textColor="@color/dirty_white"
-            android:textSize="12sp"
+            android:textSize="@dimen/dimen_12sp"
             app:layout_constraintStart_toStartOf="@+id/imageView5"
             app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -45,7 +45,7 @@
             android:text="@string/dummy_description"
             android:textColor="@color/dirty_white"
             android:fontFamily="@font/inter_bold"
-            android:textSize="12sp"
+            android:textSize="@dimen/dimen_12sp"
             app:layout_constraintStart_toStartOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -55,17 +55,17 @@
             android:layout_height="wrap_content"
             android:text="@string/dummy_location"
             android:textColor="@color/darker_grey"
-            android:textSize="12sp"
+            android:textSize="@dimen/dimen_12sp"
             android:fontFamily="@font/inter_regular"
             app:layout_constraintStart_toStartOf="@+id/textView12"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
+            android:layout_height="@dimen/dimen_40dp"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginEnd="@dimen/dimen_10dp"
             android:orientation="horizontal"
             android:background="@drawable/shadow_view"
             app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +79,7 @@
                 android:gravity="center"
                 android:text="@string/info"
                 android:textColor="@color/pally_green"
-                android:textSize="18sp" />
+                android:textSize="@dimen/dimen_18sp" />
         </LinearLayout>
 
 
