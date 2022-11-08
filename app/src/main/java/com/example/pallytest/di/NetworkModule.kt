@@ -1,5 +1,7 @@
 package com.example.pallytest.di
 
+import com.example.pallytest.common.PreferenceHelper
+import com.example.pallytest.interceptor.RequestInterceptor
 import com.example.pallytest.remote.api.PallyApi
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -31,9 +33,13 @@ class NetworkModule {
 
         @Provides
         @Singleton
-        fun provideHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor): OkHttpClient {
+        fun provideHttpClient(
+            httpLoggingInterceptor: HttpLoggingInterceptor,
+            preferenceHelper: PreferenceHelper
+        ): OkHttpClient {
             return OkHttpClient.Builder()
                 .addInterceptor(httpLoggingInterceptor)
+                .addInterceptor(RequestInterceptor(preferenceHelper))
                 .connectTimeout(CONNECT_TIMEOUT, TimeUnit.MINUTES)
                 .build()
         }
