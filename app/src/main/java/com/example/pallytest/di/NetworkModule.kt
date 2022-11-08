@@ -64,7 +64,7 @@ class NetworkModule {
 
         companion object {
             private const val CONNECT_TIMEOUT = 30L
-            private const val BASE_URL = "http://api.countrylayer.com/v2/"
+            private const val BASE_URL = "https://letsfeelz.com/tangoapp_backend/public/api/"
         }
     }
 }
