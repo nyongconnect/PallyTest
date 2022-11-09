@@ -1,6 +1,5 @@
 package com.example.pallytest.di
 
-import com.example.pallytest.common.PreferenceHelper
 import com.example.pallytest.interceptor.RequestInterceptor
 import com.example.pallytest.remote.api.PallyApi
 import com.google.gson.Gson
@@ -16,30 +15,28 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
+
+@Module
+@InstallIn(SingletonComponent::class)
 class NetworkModule {
 
-    @Module
-    @InstallIn(SingletonComponent::class)
-    class NetworkModule {
-
-        @Provides
-        @Singleton
-        fun gson(): Gson {
-            return GsonBuilder()
-                .setLenient()
-                .serializeNulls()
-                .create()
-        }
+    @Provides
+    @Singleton
+    fun gson(): Gson {
+        return GsonBuilder()
+            .setLenient()
+            .serializeNulls()
+            .create()
+    }
 
         @Provides
         @Singleton
         fun provideHttpClient(
-            httpLoggingInterceptor: HttpLoggingInterceptor,
-            preferenceHelper: PreferenceHelper
+            httpLoggingInterceptor: HttpLoggingInterceptor
         ): OkHttpClient {
             return OkHttpClient.Builder()
                 .addInterceptor(httpLoggingInterceptor)
-                .addInterceptor(RequestInterceptor(preferenceHelper))
+                .addInterceptor(RequestInterceptor())
                 .connectTimeout(CONNECT_TIMEOUT, TimeUnit.MINUTES)
                 .build()
         }
@@ -62,15 +59,14 @@ class NetworkModule {
                 .build()
         }
 
-        @Provides
-        @Singleton
-        fun provideAPI(retrofit: Retrofit): PallyApi {
-            return retrofit.create(PallyApi::class.java)
-        }
+    @Provides
+    @Singleton
+    fun provideAPI(retrofit: Retrofit): PallyApi {
+        return retrofit.create(PallyApi::class.java)
+    }
 
-        companion object {
-            private const val CONNECT_TIMEOUT = 30L
-            private const val BASE_URL = "https://letsfeelz.com/tangoapp_backend/public/api/"
-        }
+    companion object {
+        private const val CONNECT_TIMEOUT = 30L
+        private const val BASE_URL = "https://letsfeelz.com/tangoapp_backend/public/api/"
     }
 }

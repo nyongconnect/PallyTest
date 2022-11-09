@@ -1,12 +1,10 @@
 package com.example.pallytest.interceptor
 
-import com.example.pallytest.common.AppConstants
 import com.example.pallytest.common.AppConstants.USER_TOKEN
-import com.example.pallytest.common.PreferenceHelper
 import okhttp3.Interceptor
 import okhttp3.Response
 
-class RequestInterceptor constructor(private val preferenceHelper: PreferenceHelper) : Interceptor {
+class RequestInterceptor constructor() : Interceptor {
 
     override fun intercept(chain: Interceptor.Chain): Response {
 

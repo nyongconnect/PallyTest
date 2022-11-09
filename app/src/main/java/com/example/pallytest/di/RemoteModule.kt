@@ -12,6 +12,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 abstract class RemoteModule {
+
     @Binds
     @Singleton
     abstract fun remoteDataSource(remoteDataSourceImpl: ApiService): RemoteDataSource

@@ -62,7 +62,6 @@ dependencies {
     implementation applicationDependencies.navigation
     implementation applicationDependencies.navigationUi
     implementation applicationDependencies.hilt
-   // implementation applicationDependencies.hiltViewmodel
 
     kapt applicationDependencies.kaptHiltAndroidCompiler
     kapt applicationDependencies.kaptHilt

@@ -9,9 +9,13 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.pallytest.R
+
+fun <T> MutableLiveData<T>.asLiveData(): LiveData<T> = this
 
 fun TextView.setTextDiff(wordOne: String, spanIndex: Int) {
     val word = SpannableString(wordOne.slice(0 until spanIndex))
