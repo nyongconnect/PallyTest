@@ -9,6 +9,8 @@ import com.example.pallytest.presentation.adapters.EventAdapter
 import com.example.pallytest.presentation.adapters.MilongasAdapter
 import com.example.pallytest.presentation.adapters.TeachersAdapter
 import com.example.pallytest.presentation.base.BaseFragment
+import com.example.pallytest.presentation.utils.hide
+import com.example.pallytest.presentation.utils.show
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
@@ -57,6 +59,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         viewModel.state.observe(viewLifecycleOwner) {
             when(it.hasData) {
                 true -> {
+                    binding.visibilityGroup.show()
+                    binding.progress.hide()
                     eventAdapter.update(it.events)
                     milongasAdapter.update(it.milongas)
                     teachersAdapter.update(it.teachers)
