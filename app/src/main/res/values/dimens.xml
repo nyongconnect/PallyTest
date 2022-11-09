@@ -16,15 +16,16 @@
     <dimen name="dimen_32dp">32dp</dimen>
     <dimen name="dimen_100dp">100dp</dimen>
     <dimen name="dimen_110dp">110dp</dimen>
+    <dimen name="dimen_156dp">156dp</dimen>
     <dimen name="dimen_168dp">168dp</dimen>
     <dimen name="dimen_172dp">172dp</dimen>
     <dimen name="dimen_278dp">278dp</dimen>
     <dimen name="dimen_300dp">300dp</dimen>
+    <dimen name="dimen_310dp">310dp</dimen>
 
     <dimen name="dimen_12sp">12sp</dimen>
     <dimen name="dimen_13sp">13sp</dimen>
     <dimen name="dimen_14sp">14sp</dimen>
     <dimen name="dimen_16sp">16sp</dimen>
     <dimen name="dimen_18sp">18sp</dimen>
-    <dimen name="dimen_156dp">156dp</dimen>
 </resources>
