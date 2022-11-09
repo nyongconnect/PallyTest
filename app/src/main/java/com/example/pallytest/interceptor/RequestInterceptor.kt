@@ -1,5 +1,7 @@
 package com.example.pallytest.interceptor
 
+import com.example.pallytest.common.AppConstants
+import com.example.pallytest.common.AppConstants.USER_TOKEN
 import com.example.pallytest.common.PreferenceHelper
 import okhttp3.Interceptor
 import okhttp3.Response
@@ -10,8 +12,8 @@ class RequestInterceptor constructor(private val preferenceHelper: PreferenceHel
 
         val newRequest = chain.request().newBuilder().apply {
 
-            if (!(preferenceHelper.token.isNullOrEmpty())) {
-                addHeader(AUTHORIZATION, BEARER + preferenceHelper.token)
+            if (!(USER_TOKEN.isNullOrEmpty())) {
+                addHeader(AUTHORIZATION, BEARER + USER_TOKEN)
             }
 
             addHeader(ACCEPT, APP_JSON)

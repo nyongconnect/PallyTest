@@ -64,9 +64,12 @@ dependencies {
     implementation applicationDependencies.hilt
    // implementation applicationDependencies.hiltViewmodel
 
-    kapt "com.google.dagger:hilt-android-compiler:2.44"
+    kapt applicationDependencies.kaptHiltAndroidCompiler
     kapt applicationDependencies.kaptHilt
     implementation applicationDependencies.inject
+
+    implementation applicationDependencies.glide
+    kapt applicationDependencies.glideCompiler
 
     testImplementation testDependencies.junit
     androidTestImplementation testDependencies.junitExt

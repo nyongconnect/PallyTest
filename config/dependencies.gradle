@@ -27,6 +27,8 @@ ext {
     navigation_ui_ktx_version = "2.5.3"
     kaptHiltVersion = "1.0.0"
 
+    glideVersion = "4.14.2"
+
 
     //testLibraryVersion
     junitVersion = "4.13.2"
@@ -57,7 +59,9 @@ ext {
             hiltViewmodel : "androidx.hilt:hilt-lifecycle-viewmodel:${hilt_view_model_version}",
             kaptHilt : "androidx.hilt:hilt-compiler:${kaptHiltVersion}",
             kaptHiltAndroidCompiler : "com.google.dagger:hilt-android-compiler:${hilt_version}",
-            inject : "javax.inject:javax.inject:1"
+            inject : "javax.inject:javax.inject:1",
+            glide: "com.github.bumptech.glide:glide:${glideVersion}",
+            glideCompiler : "com.github.bumptech.glide:compiler:${glideVersion}"
     ]
 
     testDependencies = [

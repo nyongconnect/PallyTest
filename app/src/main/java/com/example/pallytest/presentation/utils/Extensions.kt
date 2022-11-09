@@ -5,9 +5,12 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.pallytest.R
 
 fun TextView.setTextDiff(wordOne: String, spanIndex: Int) {
@@ -34,4 +37,19 @@ fun TextView.setTextDiff(wordOne: String, spanIndex: Int) {
     )
     text = word
     append(secondWord)
+}
+
+fun ImageView.loadImage(image: Any?, placeholder: Int = 0, circular: Boolean = false) {
+    Glide
+        .with(context)
+        .load(image)
+        .placeholder(placeholder)
+        .apply(
+            if (circular) {
+                RequestOptions.circleCropTransform()
+            } else {
+                RequestOptions.noTransformation()
+            }
+        )
+        .into(this)
 }
