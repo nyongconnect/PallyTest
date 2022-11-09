@@ -1,7 +1,7 @@
 package com.example.pallytest.model
 
 data class EventsResponse(
-    val Event_List: List<Event>,
+    val Event_List: MutableList<Event>,
     val message: String,
     val offset: Int,
     val status: Boolean,

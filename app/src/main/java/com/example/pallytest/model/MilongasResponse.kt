@@ -2,7 +2,7 @@ package com.example.pallytest.model
 
 data class MilongasResponse(
     val message: String,
-    val milongas_list: List<Milongas>,
+    val milongas_list: MutableList<Milongas>,
     val offset: Int,
     val status: Boolean,
     val user_access: Int

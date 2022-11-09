@@ -5,7 +5,7 @@ data class TeachersResponse(
     val offset: Int,
     val status: Boolean,
     val teacher_count: Int,
-    val teacher_list: List<Teacher>,
+    val teacher_list: MutableList<Teacher>,
     val user_access: Int
 )
 
