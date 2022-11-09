@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="@dimen/dimen_168dp"
     android:layout_height="wrap_content"
     android:background="@color/background_colour"
+    android:paddingEnd="@dimen/dimen_10dp"
     android:layout_marginEnd="@dimen/dimen_7dp">
 
     <androidx.cardview.widget.CardView
@@ -30,8 +30,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dimen_6dp"
-                app:layout_constraintStart_toStartOf="@+id/textView5"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="@+id/txt_teacher_name"
+                app:layout_constraintTop_toBottomOf="@+id/txt_teacher_name"
                 app:srcCompat="@drawable/ic_rate" />
 
             <ImageView
@@ -65,10 +65,10 @@
                 android:background="@color/light_grey"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_teacher_distance" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/txt_teacher_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_4dp"
@@ -81,16 +81,16 @@
                 app:layout_constraintVertical_bias="0.333" />
 
             <TextView
-                android:id="@+id/textView7"
+                android:id="@+id/txt_teacher_review_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_4dp"
                 android:text="@string/_100"
                 android:textColor="@color/grey"
                 android:fontFamily="@font/inter_regular"
-                app:layout_constraintBottom_toBottomOf="@+id/textView6"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                app:layout_constraintTop_toTopOf="@+id/textView6" />
+                app:layout_constraintBottom_toBottomOf="@+id/txt_teacher_rating"
+                app:layout_constraintStart_toEndOf="@+id/txt_teacher_rating"
+                app:layout_constraintTop_toTopOf="@+id/txt_teacher_rating" />
 
             <TextView
                 android:id="@+id/txt_experience"
@@ -102,10 +102,10 @@
                 android:textColor="@color/white"
                 android:fontFamily="@font/inter_regular"
                 app:layout_constraintStart_toStartOf="@+id/imageView2"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_teacher_rating" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/txt_teacher_distance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_8dp"
@@ -132,13 +132,14 @@
                 app:layout_constraintTop_toTopOf="@+id/imageView4" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/txt_teacher_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_10dp"
                 android:layout_marginTop="@dimen/dimen_58dp"
                 android:text="Ines Muzzopappa"
-                android:fontFamily="@font/inter_bold"                android:textStyle="bold"
+                android:maxLines="1"
+                android:fontFamily="@font/inter_bold"
                 android:textColor="@color/white"
                 android:textSize="@dimen/dimen_14sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -149,6 +150,7 @@
 
 
     <ImageView
+        android:id="@+id/img_teacher"
         android:layout_width="@dimen/dimen_100dp"
         android:layout_height="@dimen/dimen_100dp"
         android:elevation="@dimen/dimen_10dp"

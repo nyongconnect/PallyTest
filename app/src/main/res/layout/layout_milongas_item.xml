@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/match_constraint"
     android:layout_marginEnd="@dimen/dimen_10dp"
+    android:paddingEnd="@dimen/dimen_10dp"
     android:backgroundTint="@color/background_colour"
     android:orientation="vertical"
     app:cardCornerRadius="@dimen/dimen_10dp">
@@ -37,6 +38,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_10dp"
+            android:maxLines="1"
             android:fontFamily="@font/inter_bold"
             android:text="@string/la_rosa_milonga"
             android:textColor="@color/white"
@@ -119,7 +121,6 @@
             android:layout_width="@dimen/match_constraint"
             android:layout_height="@dimen/dimen_1dp"
             android:layout_marginTop="@dimen/dimen_4dp"
-            android:layout_marginEnd="@dimen/dimen_10dp"
             android:background="@color/light_grey"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

@@ -12,6 +12,9 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.GranularRoundedCorners
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.example.pallytest.R
 
@@ -43,14 +46,16 @@ fun TextView.setTextDiff(wordOne: String, spanIndex: Int) {
     append(secondWord)
 }
 
-fun ImageView.loadImage(image: Any?, placeholder: Int = 0, circular: Boolean = false) {
+fun ImageView.loadImage(image: Any?, placeholder: Int = 0, circular: Boolean = false, radius: Float = 0f) {
+    val requestOptions = RequestOptions()
     Glide
         .with(context)
         .load(image)
         .placeholder(placeholder)
         .apply(
             if (circular) {
-                RequestOptions.circleCropTransform()
+                if (radius == 0f) RequestOptions.circleCropTransform()
+                else requestOptions.transform(CenterCrop(), GranularRoundedCorners(radius, radius, 0f, 0f ))
             } else {
                 RequestOptions.noTransformation()
             }

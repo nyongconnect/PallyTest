@@ -20,9 +20,9 @@ data class Milongas(
     val lati: String,
     val longi: String,
     val milonga_detail: MilongaDetail,
-    val phone_number: Any,
+    val phone_number: Any?,
     val rating: Int,
-    val reviews_count_avg_star: Any,
+    val reviews_count_avg_star: Any?,
     val reviews_count_count: Int,
     val user_id: Int,
     val user_image: String
