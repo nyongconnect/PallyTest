@@ -37,7 +37,7 @@ class EventAdapter (private val context: Context, val onClick: (EventModel) -> U
         fun bind(element: Event) {
 
             binding.txtDate.text = element.event_end_date
-            binding.imgEvent.loadImage(element.event_link, placeholder = R.drawable.event_image_placeholder, circular = true, radius = 10f)
+            binding.imgEvent.loadImage(element.event_link, placeholder = R.drawable.event_image_placeholder, radius = 10f)
             binding.eventAddress.text = element.address
             binding.txtEventName.text = element.event_name
             itemView.setOnClickListener {

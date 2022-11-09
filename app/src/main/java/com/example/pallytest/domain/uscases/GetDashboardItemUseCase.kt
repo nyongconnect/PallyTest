@@ -1,7 +1,7 @@
 package com.example.pallytest.domain.uscases
 
 import com.example.pallytest.domain.repository.PallyRepository
-import com.example.pallytest.remote.service.DashboardItem
+import com.example.pallytest.model.DashboardItem
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

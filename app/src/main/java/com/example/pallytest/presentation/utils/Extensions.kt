@@ -55,13 +55,11 @@ fun ImageView.loadImage(image: Any?, placeholder: Int = 0, circular: Boolean = f
         .placeholder(placeholder)
         .apply(
             if (circular) {
-                if (radius == 0f) RequestOptions.circleCropTransform()
-                else requestOptions.transform(CenterCrop(), GranularRoundedCorners(radius, radius, 0f, 0f ))
+                RequestOptions.circleCropTransform()
             } else {
-                RequestOptions.noTransformation()
+                requestOptions.transform(CenterCrop(), GranularRoundedCorners(radius, radius, 0f, 0f ))
             }
-        )
-        .into(this)
+        ).into(this)
 }
 
 fun View.show() {

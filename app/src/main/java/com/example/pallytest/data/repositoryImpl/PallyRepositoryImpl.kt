@@ -3,7 +3,6 @@ package com.example.pallytest.data.repositoryImpl
 import com.example.pallytest.data.source.RemoteDataSource
 import com.example.pallytest.domain.repository.PallyRepository
 import com.example.pallytest.model.*
-import com.example.pallytest.remote.service.DashboardItem
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
